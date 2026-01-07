@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 st.title("Customer Analytics Dashboard")
-df = pd.read_csv("customers.csv")
+df = pd.read_csv("Dashboard_Customers/customers.csv")
 
 st.sidebar.header("Filter Data")
 departments = st.sidebar.multiselect(
@@ -125,4 +125,5 @@ fig_box = px.box(
     color="Department",
     title="Distribusi Gaji (Min, Median, Max)"
 )
+
 st.plotly_chart(fig_box)
